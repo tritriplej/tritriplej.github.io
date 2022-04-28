@@ -28,17 +28,35 @@
 							<!-- Content -->
 								<section>
 									<h3>github在线展示前端项目页面</h3>
-									<p>最近在慢慢构建自己的主页，想把之前做的一些可视分析系统放在主要上展示，但是要生成ip地址比较麻烦，对比来看，使用github.io的功能算是比较简单易维护的。在网上看了几个教程，把比较有用的放在这里，对我自己有效的流程也进行记录。</p>
+									<p>最近在慢慢构建自己的主页，想把之前做的一些可视分析系统放在主要上展示，但是要生成ip地址比较麻烦，对比来看，使用github.io的功能算是比较简单易维护的。在网上看了几个教程，把比较有用的放在这里，以便快速查询。</p>
 									<ol>
-										<li>注册账号等前期工作</li>
-										<li>安装git</li>
+										<li>git维护常用代码</li>
+										<p>提示：21年7月后已经不能用账号加密码登入，必须要用personal token,查看非常有用的链接部分。</p>
+										<p>1. 创建空目录</p>
 										<pre><code>
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-										</code></pre>
-										<li>创建仓库并上传</li>
-										<p>测试测试</p>
-										<li>设置page</li>
-			
+mkdir (repository_name) ## 在合适路径里创建空目录
+cd (repository_name) 
+pwd ##显示当前目录									
+</code></pre>
+										<p>2. 把目录变成git仓库 <code>git init</code>。如果是本地已经有的project，进入project所在目录，从这一步开始，上传所有文件用<code>git add .</code>注意此处add后有一个dot</p>
+										<p>3. 修改readme.txt文件放到仓库</p> <pre><code>git add readme.txt
+git commit -m "wrote a readme file"  ## 本次提交的说明
+</code></pre>
+										<p>注意：可以一次add多个，一起commit；add其实是把修改记录到了暂存区，而不是把文件记录到了暂存区，所以add之后再对文件进行的修改不会在commit使被commit，必须要在修改之后再add一次。也就是说commit只提交已经被存到暂存区的修改。</p>
+										<p>4. 远程上传到暂存区</p><code>git remote add origin https://github.com/xxxxxx/xxxxxxxxxxxxxxxx</code>
+										<p>5. 远程上传到github仓库</p><code>git push -u origin master</code>
+										
+										<p>6. 其他操作：a.查看仓库当前状态<code>git status</code>. b.查看没被commit的修改</p><code>git dff</code>.  c.查看历史修改记录<code>git log</code>
+										；回退上个版本<code>git reset --hard HEAD^</code>。注意：当前版本用<code>HEAD</code>表示，上一个版本用<code>HEAD^</code>表示，上上一个版本用<code>HEAD^^</code>表示，前100个就是<code>HEAD~100</code>
+										如果要返回到新的版本，可以找新的版本的commit id，使用<code>git reset --hard xxxxx</code>写前几位即可；可以使用<code>git reflog</code>输出历史命令找回commit id</p>
+										d.删除文件并删除版本库内的文件<code>git rm test.txt</code><code>git commit -m "remove test.txt"</code>
+										e.误删文件从版本库恢复<code>git checkout -- test.txt</code></p>
+										<li>非常有用的链接</li>
+										<ul>
+											<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600" class="logo">廖雪峰git教程</a></li>
+											<li><a href="https://www.cnblogs.com/free-whale/p/10726654.html" class="logo">github在线展示前端项目页面</a></li>
+											<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="logo">获取个人token</a></li>
+										</ul>
 									</ol>
 									
 
