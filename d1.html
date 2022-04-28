@@ -44,9 +44,7 @@ git remote add origin https://github.com/username/repositoryname.git ## 远程�
 git push -u origin master ## master 是当前origin的branch名字 ## 远程上传到github仓库
 </code></pre>					
 										<h5>其他常用操作</h5>
-										<p>注意：当前版本用<code>HEAD</code>表示，上一个版本用<code>HEAD^</code>表示，上上一个版本用<code>HEAD^^</code>表示，前100个就是<code>HEAD~100</code>。</p>
-										<pre><code>## 进入本地project文件路径
-git status ## 查看仓库当前状态
+										<pre><code>## git status ## 查看仓库当前状态
 git diff ## 查看没被commit的修改
 git log ##查看历史修改记录
 git reset --hard HEAD^  ##回退上个版本
@@ -61,9 +59,18 @@ git commit -m "remove test.txt"
 
 ## 误删文件从版本库恢复
 git checkout -- test.txt
+
+## 远程库的操作
+git remote -v ##查看远程库信息
+git remote rm origin ##删除本地与远程的绑定关系 重新关联用git remote add
 </code></pre>
+										<p>注意：当前版本用<code>HEAD</code>表示，上一个版本用<code>HEAD^</code>表示，上上一个版本用<code>HEAD^^</code>表示，前100个就是<code>HEAD~100</code>。</p>
 										<hr class="major" />
-										<li>非常有用的链接</li>
+										<h5>关于上传超过100M的文件的报错问题</h5>
+										<p>上传超过100M，会报错<code>this exceeds GitHub's file size limit of 100.00 MB</code>，解决的办法是通过安装插件<a href="https://github.com/git-lfs/git-lfs"><strong>git-lfs</strong></a></p>
+										<pre><code>## 
+</code></pre>
+										<li><strong>非常有用的链接</strong></li>
 										<ul>
 											<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600" class="logo">廖雪峰git教程</a></li>
 											<li><a href="https://www.cnblogs.com/free-whale/p/10726654.html" class="logo">github在线展示前端项目页面</a></li>
@@ -129,9 +136,7 @@ git checkout -- test.txt
 									<p>这个人很懒，还不知道写什么.</p>
 									<ul class="contact">
 										<li class="icon solid fa-envelope"><a href="#">jinjingjiang000@gmail.com</a></li>
-										<li class="icon solid fa-phone">(+86)150-6230-1309</li>
-										<li class="icon solid fa-home">复旦大学可视分析与智能决策实验室<br />
-										大数据学院应用统计</li>
+										
 									</ul>
 								</section>
 
