@@ -27,33 +27,44 @@
 
 							<!-- Content -->
 								<section>
-									<header class="main">
-										<h1>Last Update: April, 28</h1>
-									</header>
-									<p>柏格森认为，一个人的自我并不是一个静止的物，它是一个进程，一个有活力的行动，一个充满变化的成为的过程，至死方休。</p>
-									
-									<hr class="major" />
+									<h2>关于爬虫的记录</h2>
+									<p>学习爬虫遇到了好多困难。</p>
+									<ol>
+										<li><strong>十分有用的链接</strong></li>
+										<ul>
+											<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600" class="logo">廖雪峰git教程</a></li>
+											<li><a href="https://www.cnblogs.com/free-whale/p/10726654.html" class="logo">github在线展示前端项目页面</a></li>
+											<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="logo">github个人token</a></li>
+										</ul>
+										<p></p>
+										<li><strong>学习过的案例</strong></li>
+										<h5>国家统计局</h5>
+										<p>尝试爬取国家统计局的数据，找到一个写的很详细的<a href="https://blog.csdn.net/qq_41988893/article/details/103017854?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_paycolumn_v3&utm_relevant_index=2">教程</a>，使用的是request。
+											分析网页结构的路径：按<code>F12</code>或<code>ctrl+command+c</code>进入后台页面，找到network-XHR，任意点一个页面元素，弹出<code>easyquery.htm</code>，多点几个观察URL的构成和Query String Parameters之间的关系。
+										
+										<li><strong>问题解决</strong></li>
+										<ol>
+											<li>解决<code>SSLError: HTTPSConnectionPool异常</code></li>
+											<p>在<code>request.get(...,verify=False)</code>。但是会出现很多的warning，所以要加<code>import urllib3</code><code>urllib3.disable_warnings</code></p>
+										</ol>
+										</p>
+										<h5></h5>
+										<pre><code>
 
-									<h5><a href="d1.html">关于git和github的记录</a></h5>
-									<h5><a href="d2.html">关于爬虫的记录</a></h5>
-					
-									<!-- <hr class="major" />
-									<h2></h2>
-									<p></p> -->
+</code></pre>					
+										<hr class="major" />
+										<h5>###</h5>
+										<pre><code>
+</code></pre>
+										
+									</ol>
+									<hr class="major" />
+										<!-- <li><strong></strong></li> -->
+
+
 									
 								</section>
 
-								<ul class="pagination">
-									<li><span class="button disabled">Prev</span></li>
-									<li><a href="web.html" class="page active">1</a></li>
-									<!-- <li><a href="#" class="page">2</a></li>
-									<li><a href="#" class="page">3</a></li>
-									<li><span>&hellip;</span></li>
-									<li><a href="#" class="page">8</a></li>
-									<li><a href="#" class="page">9</a></li>
-									<li><a href="#" class="page">10</a></li>
-									<li><a href="#" class="button">Next</a></li> -->
-								</ul>
 						</div>
 					</div>
 
@@ -85,7 +96,7 @@
 										<li>
 											<span class="opener">D3.js</span>
 											<ul>
-												<li><a href="test.html">数据分析案例</a></li>
+												<li><a href="test.html">d1</a></li>
 											</ul>
 										</li>
 										<li>
@@ -97,29 +108,6 @@
 									</ul>
 								</nav>
 
-							<!-- Section -->
-								<!-- <section>
-									<header class="major">
-										<h2>Ante interdum</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
-								</section> -->
 
 							<!-- Section -->
 								<section>
@@ -136,13 +124,11 @@
 							<!-- Footer -->
 								<footer id="footer">
 									<p class="copyright">Maintained by Jinjing Jiang.</p>
-									<!-- <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p> -->
+								 
 								</footer>
 
 						</div>
 					</div>
-
-					
 
 			</div>
 
