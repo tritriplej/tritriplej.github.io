@@ -31,34 +31,34 @@
 									<p>学习爬虫遇到了好多困难。</p>
 									<ol>
 										<li><strong>十分有用的链接</strong></li>
-										<ul>
+										<!-- <ul>
 											<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600" class="logo">廖雪峰git教程</a></li>
 											<li><a href="https://www.cnblogs.com/free-whale/p/10726654.html" class="logo">github在线展示前端项目页面</a></li>
 											<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="logo">github个人token</a></li>
-										</ul>
-										<p></p>
-										<li><strong>学习过的案例</strong></li>
-										<h5>国家统计局</h5>
-										<p>尝试爬取国家统计局的数据，找到一个写的很详细的<a href="https://blog.csdn.net/qq_41988893/article/details/103017854?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_paycolumn_v3&utm_relevant_index=2">教程</a>，使用的是request。
-											分析网页结构的路径：按<code>F12</code>或<code>ctrl+command+c</code>进入后台页面，找到network-XHR，任意点一个页面元素，弹出<code>easyquery.htm</code>，多点几个观察URL的构成和Query String Parameters之间的关系。
-										
-										<li><strong>问题解决</strong></li>
-										<ol>
-											<li>解决<code>SSLError: HTTPSConnectionPool异常</code></li>
-											<p>在<code>request.get(...,verify=False)</code>。但是会出现很多的warning，所以要加<code>import urllib3</code><code>urllib3.disable_warnings</code></p>
-										</ol>
-										</p>
-										<h5></h5>
-										<pre><code>
-
-</code></pre>					
+										</ul> -->
 										<hr class="major" />
-										<h5>###</h5>
-										<pre><code>
+										<li><strong>案例</strong></li>
+										<ul>
+											<li><h5>爬取国家统计局</h5></li>
+											<p>尝试爬取国家统计局的数据，找到一个写的很详细的<a href="https://blog.csdn.net/qq_41988893/article/details/103017854?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_paycolumn_v3&utm_relevant_index=2">教程</a>，使用的是request。
+											分析网页结构的路径：按<code>F12</code>或<code>ctrl+command+c</code>进入后台页面，找到network-XHR，任意点一个页面元素，弹出<code>easyquery.htm</code>，多点几个观察URL的构成和Query String Parameters之间的关系。
+										</ul>
+
+										<hr class="major" />
+										<li><strong>问题解决</strong></li>
+										<ul>
+											<li>解决<i>SSLError: HTTPSConnectionPool异常</i></li>
+											<pre><code>import urllib3
+urllib3.disable_warnings ## 关闭warning提醒
+
+request.get(...,verify=False) ## 加上verify=False
 </code></pre>
+										</ul>
+										
+										
 										
 									</ol>
-									<hr class="major" />
+									
 										<!-- <li><strong></strong></li> -->
 
 
